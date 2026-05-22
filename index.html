@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+</head>
+<body>
+
+    <!-- ================= PANTALLA 1: LA CAJA DE REGALO ================= -->
+    <section id="pantalla-1" class="pantalla activa">
+        <div class="regalo-wrapper">
+            <!-- La Caja de Regalo -->
+            <div class="caja-container">
+                <div class="tapa"></div>
+                <div class="cuerpo"></div>
+            </div>
+            
+            <!-- Texto e indicador -->
+            <p class="instruccion">Clickea el botón para abrir tu regalo</p>
+            <button class="btn-principal" onclick="irAPantalla2()">Abrir Regalo 🎁</button>
+        </div>
+    </section>
+
+
+    <!-- ================= PANTALLA 2: EL CHANTEJE (SÍ / NO) ================= -->
+    <section id="pantalla-2" class="pantalla">
+        <div class="pregunta-wrapper">
+            <h2>¿Segura que quieres abrirlo? </h2>
+            
+            <div class="botones-contenedor">
+                <!-- El botón SÍ que va a crecer -->
+                <button id="btn-si" class="btn-si" onclick="irAPantalla3()">Sí</button>
+                <!-- El botón NO que activará el truco -->
+                <button id="btn-no" class="btn-no" onclick="hacerMasGrande()">No</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= PANTALLA 3: EL BESO (LA SORPRESA) ================= -->
+    <section id="pantalla-3" class="pantalla">
+        <div class="sorpresa-container">
+            <!-- Contenedor para la animación de 2 steps de las muñequitas -->
+            <div class="munequitas-box">
+                <div class="frame frame-1"></div>
+                <div class="frame frame-2"></div>
+            </div>
+            
+            <h1 class="texto-cumple">¡Feliz Cumpleaños! 🎉</h1>
+        </div>
+    </section>
+
+    <!-- JS básico al final para controlar el flujo -->
+    <script src="script.js"></script>
+</body>
+</html>
