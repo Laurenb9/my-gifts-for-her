@@ -121,3 +121,46 @@ button:active {
     from { transform: scale(1); }
     to { transform: scale(1.05); }
 }
+
+/* ================= GALERÍA DE GATOS ANIMADA ================= */
+.galeria-gatos {
+    width: 320px; /* Ancho de la ventana donde se verán los gatos */
+    height: 250px;
+    overflow: hidden;
+    border: 4px solid #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(251, 111, 146, 0.2);
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.gatos-track {
+    display: flex;
+    width: calc(320px * 2); /* El ancho total de las 2 fotos juntas (640px) */
+    /* Animación: dura 4s en total (2s por foto), usa steps(1) para que cambie de golpe e infinite */
+    animation: scrollGatos 2s steps(1) infinite; 
+}
+
+.gatos-track img {
+    width: 320px; /* Cada foto mide exactamente lo mismo que la ventana */
+    height: 250px;
+    object-fit: cover; /* Para que las fotos no se deformen */
+}
+
+/* Animación corregida para 2 fotos */
+@keyframes scrollGatos {
+    0%, 49% { transform: translateX(0); }       /* Muestra la primera foto */
+    50%, 100% { transform: translateX(-320px); } /* Salta de golpe a la segunda foto */
+}
+
+.mensaje {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FF007F; /* Fucsia para resaltar el final */
+    
+}
+.heary {
+    font-size: 2rem;
+    font-weight: 700;
+    animation: latido 1s infinite;
+}
