@@ -159,8 +159,14 @@ button:active {
     color: #FF007F; /* Fucsia para resaltar el final */
     
 }
-.heary {
+.heart {
     font-size: 2rem;
     font-weight: 700;
-    animation: latido 1s infinite;
+    animation: latido 1s steps(16) infinite alternate;
+}
+.saludo{
+        font-size: 2.2rem;
+    font-weight: 700;
+    color: #FF007F;
+    animation: latido 1s steps(16) infinite alternate;
 }
